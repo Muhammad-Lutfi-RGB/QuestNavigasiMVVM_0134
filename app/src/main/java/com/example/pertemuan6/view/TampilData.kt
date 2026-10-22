@@ -3,6 +3,9 @@ package com.example.pertemuan6.view
 import androidx.compose.foundation.layout.*
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.stringResource
 import com.example.pertemuan6.R
 
@@ -16,5 +19,15 @@ fun TampilData(
         Pair(stringResource(id = R.string.jenis_kelamin), "Lainnya"),
         Pair(stringResource(id = R.string.alamat), "Yogyakarta")
     )
-
+    Scaffold(
+        modifier = Modifier,
+        topBar = {
+            TopAppBar(
+                title = { Text(text = stringResource(id = R.string.tampil), color = Color.White) },
+                colors = TopAppBarDefaults.mediumTopAppBarColors(
+                    containerColor = colorResource(id = R.color.teal_700)
+                )
+            )
+        }
+    ) { }
 }
