@@ -1,1 +1,7 @@
 package com.example.pertemuan6
+
+
+enum class Navigasi {
+    FormulirSaya,
+    Detail
+}
